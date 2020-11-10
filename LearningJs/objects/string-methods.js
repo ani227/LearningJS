@@ -24,4 +24,4 @@ let isValidPassword = function(newPassword) {
 
 console.log(isValidPassword('password@2298')) // not valid bcoz it can't contain the string password in it.
 console.log(isValidPassword('anish@327138'))
-console.log(isValidPassword('ANish@1'))
+console.log(isValidPassword('ANi@12'))
