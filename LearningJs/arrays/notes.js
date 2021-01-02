@@ -46,3 +46,41 @@ notes.forEach(function(items, numb) {
     console.log(`${num}. ${items}`) //Note: when Fn is call into Fn it is callback function
 })
 console.log(notes)
+
+//for Loop
+
+for (let count = 0; count <= 2; count++) { //to count from 0 to 2
+    console.log(count)
+}
+
+for (let count = 2; count >= 0; count--) { //count from 2 to 0
+    console.log(count)
+}
+
+for (let count = 0; count < notes.length; count++) { //list items in array notes
+    console.log(notes[count])
+}
+
+for (let count = notes.length - 1; count >= 0; count--) { //list items in reverse order of array notes
+    console.log(notes[count])
+}
+
+//task : to print items in array using for loop
+
+for (let count = 1; count <= notes.length; count++) { //list items in array notes
+    console.log(`${count}. ${notes[count - 1]}`)
+}
+//or
+for (let count = 0; count < notes.length; count++) { //list items in array notes
+    console.log(`${count + 1}. ${notes[count]}`)
+} //or 
+for (let count = 0; count < notes.length; count++) { //list items in array notes
+    const num = count + 1
+    const items = notes[count]
+    console.log(`${num}. ${items}`)
+}
+
+//searching 
+
+console.log(notes.indexOf('note4 new')) // -1 value means it does not exit, if exit it returns index value
+notes.indexOf('note 4')
