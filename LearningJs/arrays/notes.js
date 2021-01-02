@@ -26,3 +26,18 @@ notes.splice(1, 0, 'note 2 new') //start at index 1, del 0 item and add note 2 n
 //combine above 2 codes to replace item or do -
 notes[2] = 'note4 new' //replace item at index 2 with new item
 console.log(notes)
+
+//looping
+notes.forEach(function() { //this function will be called no. of time equal to no. of nodes
+    console.log('testing')
+})
+
+notes.forEach(function(items) { //to print items one by one
+    console.log(items)
+})
+
+notes.forEach(function(items, index) {
+    console.log(index) //to print index
+    console.log(items) //to print item at that index
+})
+console.log(notes)
