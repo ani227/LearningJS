@@ -36,8 +36,8 @@
 
 // correction after lecture review
 
-let gradeCalculator = function(score, total = 100, grade) {
-    let percent = (score / total) * 100;
+const gradeCalculator = function(score, total = 100, grade) { //replaced let with const i.e. constant
+    const percent = (score / total) * 100;
     if (percent >= 91) {
         grade = "A";
     } else if (percent >= 81) {
