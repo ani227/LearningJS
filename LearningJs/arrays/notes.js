@@ -40,4 +40,9 @@ notes.forEach(function(items, index) {
     console.log(index) //to print index
     console.log(items) //to print item at that index
 })
+
+notes.forEach(function(items, numb) {
+    const num = numb + 1
+    console.log(`${num}. ${items}`) //Note: when Fn is call into Fn it is callback function
+})
 console.log(notes)
