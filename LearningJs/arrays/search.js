@@ -5,7 +5,7 @@
 
 //findIndex is better option to search in object insted of indexOf becoz indexOf always use === for objects to find
 
-const notes = [{}, {
+const notes = [{
     title: 'trip',
     body: 'spain'
 }, {
@@ -18,7 +18,6 @@ const notes = [{}, {
 
 // console.log(notes.length)
 // console.log(notes)
-
 // const index = notes.findIndex(function(note, index) {
 //     return note.title === 'habbits'
 // })
@@ -27,10 +26,22 @@ const notes = [{}, {
 //searching part 2
 const findNote = function(notes, noteTitle) {
     const index = notes.findIndex(function(note, index) {
-        return note.title === noteTitle //converting everything in lower case for case insensitive search
+        return note.title.toLowerCase() === noteTitle.toLowerCase()
     })
     return notes[index]
 }
 
-const note = findNote(notes, 'Office')
+const note = findNote(notes, 'ofFice')
 console.log(note)
+
+
+// **filter
+const findNotes = function(notes, query) {
+    return notes.filter(function(note, index) {
+        const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+        const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
+        return isTitleMatch || isBodyMatch
+    })
+}
+
+console.log(findNotes(notes, 'noida'))
