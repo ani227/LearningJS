@@ -3,7 +3,8 @@
 // console.log(notes.indexOf('note4 new')) // -1 value means it does not exit, if exit it returns index value
 // notes.indexOf('note 4')
 
-//findIndex is better option to search in object insted of indexOf becoz indexOf always use === for objects to find
+//findIndex is better option to search in object insted of indexOf becoz indexOf always use === for objects to find, 
+//i.e. indexOf fails with object, only work good wit similer data types
 
 const notes = [{
     title: 'trip',
