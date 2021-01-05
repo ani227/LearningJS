@@ -1,0 +1,49 @@
+//search something and delete
+
+// const para = document.querySelectorAll('p')
+
+// para.forEach(function(text) {
+//     if (text.textContent.includes('the')) {
+//         text.remove()
+//     }
+// })
+
+// para.forEach(function(text) {
+//     if (text.textContent.includes('The')) {
+//         text.remove()
+//     }
+// })
+
+
+// todos left
+
+const todos = [{
+    text: 'Order cat food',
+    completed: false
+}, {
+    text: 'Clean kitchen',
+    completed: true
+}, {
+    text: 'Buy food',
+    completed: true
+}, {
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Exercise',
+    completed: true
+}]
+
+const incompleteTodos = todos.filter(function(todo) {
+    return !todo.completed
+})
+
+const summary = document.createElement('p')
+summary.textContent = `You have ${incompleteTodos.length} todos left`
+document.querySelector('body').appendChild(summary)
+
+todos.forEach(function(todo) { // list all todos on browser
+    const p = document.createElement('p')
+    p.textContent = todo.text
+    document.querySelector('body').appendChild(p)
+})
