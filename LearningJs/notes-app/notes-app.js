@@ -34,3 +34,8 @@ const notes = [{
     title: 'Office',
     body: 'noida'
 }]
+
+document.querySelector('button.btn1').addEventListener('click', function(e) {
+    console.log('Did this work?')
+    e.target.textContent = 'Notes Created' //changing content of button
+})

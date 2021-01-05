@@ -47,3 +47,10 @@ todos.forEach(function(todo) { // list all todos on browser
     p.textContent = todo.text
     document.querySelector('body').appendChild(p)
 })
+
+
+//listen for new todo creation
+
+document.querySelector('button.btntodo').addEventListener('dblclick', function() { //active on double click
+    console.log('Yes it worked!')
+})
