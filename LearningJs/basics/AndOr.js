@@ -1,11 +1,11 @@
 let temp = 35;
 
-if (temp >= 11 && temp <= 30) {
-  console.log("Go For it, It is pretty nice!");
-} else if (temp <= 10 || temp >= 45) {
-  console.log("Not good, don't go outside");
+if (temp >= 11 && temp <= 30) { //include both
+    console.log("Go For it, It is pretty nice!");
+} else if (temp <= 10 || temp >= 45) { //if any one is true
+    console.log("Not good, don't go outside");
 } else {
-  console.log("Ehh! Do what you want");
+    console.log("Ehh! Do what you want");
 }
 
 // challengele
@@ -18,9 +18,9 @@ let isGuestOneVegan = false;
 let isGuestTwoVegan = false;
 
 if (isGuestOneVegan && isGuestTwoVegan) {
-  console.log("Sir, here are your vegan dishes");
+    console.log("Sir, here are your vegan dishes");
 } else if (isGuestOneVegan || isGuestTwoVegan) {
-  console.log("Sir, here are some vegan dishes as well");
+    console.log("Sir, here are some vegan dishes as well");
 } else {
-  console.log("Sir, here are items we can serve");
+    console.log("Sir, here are items we can serve");
 }
