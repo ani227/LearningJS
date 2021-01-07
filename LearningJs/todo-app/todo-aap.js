@@ -51,6 +51,12 @@ todos.forEach(function(todo) { // list all todos on browser
 
 //listen for new todo creation
 
-document.querySelector('button.btntodo').addEventListener('dblclick', function() { //active on double click
+document.querySelector('#add-todo').addEventListener('dblclick', function() { //active on double click
     console.log('Yes it worked!')
+})
+
+document.querySelector('#del-todo').addEventListener('click', function() {
+    document.querySelectorAll('.del-para').forEach(function(todos) {
+        todos.remove()
+    })
 })

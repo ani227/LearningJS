@@ -35,7 +35,20 @@ const notes = [{
     body: 'noida'
 }]
 
-document.querySelector('button.btn1').addEventListener('click', function(e) {
-    console.log('Did this work?')
-    e.target.textContent = 'Notes Created' //changing content of button
+//changing content of item by id btn-notes
+
+const newHead = document.createElement('p')
+document.querySelector('#btn-notes').addEventListener('click', function(e) {
+    // console.log('Did this work?')  //print on console
+    e.target.textContent = 'Notes Created'
+    newHead.textContent = 'This is new Notes'
+    document.querySelector('body').appendChild(newHead)
+})
+
+//to remove content after button click
+
+document.querySelector('#btn-delete').addEventListener('click', function() {
+    document.querySelectorAll('.note').forEach(function(note) {
+        note.remove()
+    })
 })
