@@ -36,7 +36,6 @@ const notes = [{
 }]
 
 //changing content of item by id btn-notes
-
 const newHead = document.createElement('p')
 document.querySelector('#btn-notes').addEventListener('click', function(e) {
     // console.log('Did this work?')  //print on console
@@ -46,9 +45,17 @@ document.querySelector('#btn-notes').addEventListener('click', function(e) {
 })
 
 //to remove content after button click
-
 document.querySelector('#btn-delete').addEventListener('click', function() {
     document.querySelectorAll('.note').forEach(function(note) {
         note.remove()
     })
+})
+
+//capture input from form
+document.querySelector('#capture-input').addEventListener('change', function(e) { //change event fire on click or unfocus
+    console.log(e.target.value)
+})
+
+document.querySelector('#capture-input').addEventListener('input', function(e) { // #real-time, input event fire on every character
+    console.log(e.target.value)
 })

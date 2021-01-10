@@ -60,3 +60,9 @@ document.querySelector('#del-todo').addEventListener('click', function() {
         todos.remove()
     })
 })
+
+//add new todo
+
+document.querySelector('#new-todo').addEventListener('input', function(e) {
+    console.log(e.target.value)
+})
